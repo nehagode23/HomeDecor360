@@ -17,7 +17,7 @@ const Home = () => {
                         <View style={styles.cartCount}>
                             <Text style={styles.cartNumber}>8</Text>
                         </View>
-                        <TouchableOpacity>
+                        <TouchableOpacity> 
                         <Fontisto name='shopping-bag' size={24}/>
                         </TouchableOpacity>
                     </View>

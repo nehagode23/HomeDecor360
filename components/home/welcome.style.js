@@ -11,7 +11,41 @@ const styles=StyleSheet.create({
         marginTop:top,
         color:color,
         marginHorizontal:12
-    })
+    }),
+    searchContainer:{
+        flexDirection:"column",
+        justifyContent:"center",
+        alignItems:"center",
+        backgroundColor:COLORS.secondary,
+        borderRadius:SIZES.medium,
+        marginVertical:SIZES.medium
+    },
+    searchIcon:{
+        marginHorizontal:10,
+        color:"green",
+        marginTop:SIZES.small
+    },
+    searchWrapper:{
+        flex:1,
+        backgroundColor:COLORS.secondary,
+        borderRadius:SIZES.small,
+        marginRight:SIZES.small
+    },
+    searchInput:{
+        fontFamily:"regular",
+        height:"100%",
+        width:"100%",
+        paddingHorizontal:SIZES.small
+    },
+    searchBtn:{
+        width:"50%",
+        height:"100%",
+        borderRadius:SIZES.medium,
+        justifyContent:"center",
+        alignItems:"center",
+        backgroundColor:COLORS.primary,
+
+    }
 
 })
 

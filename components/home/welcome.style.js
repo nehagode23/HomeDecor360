@@ -3,7 +3,7 @@ import { COLORS,SIZES } from "../../constants";
 
 const styles=StyleSheet.create({
     container:{
-        width:"100%"
+        width:"100%",
     },
     welcometext:(color,top)=>({
         fontFamily:"bold",
@@ -13,33 +13,37 @@ const styles=StyleSheet.create({
         marginHorizontal:12
     }),
     searchContainer:{
-        flexDirection:"column",
-        justifyContent:"center",
-        alignItems:"center",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-around",
+        alignItems: "center",
         backgroundColor:COLORS.secondary,
         borderRadius:SIZES.medium,
-        marginVertical:SIZES.medium
+        // marginVertical:SIZES.small
     },
     searchIcon:{
-        marginHorizontal:10,
+        marginLeft: 15,
         color:"green",
-        marginTop:SIZES.small
+        // marginTop:SIZES.small
     },
     searchWrapper:{
-        flex:1,
+        flex: 1,
         backgroundColor:COLORS.secondary,
         borderRadius:SIZES.small,
         marginRight:SIZES.small
     },
     searchInput:{
         fontFamily:"regular",
-        height:"100%",
-        width:"100%",
+        // height:"100%",
+        // width:"100%",
         paddingHorizontal:SIZES.small
     },
     searchBtn:{
-        width:"50%",
-        height:"100%",
+        width:"fit-content",
+        // height:"100%",
+        padding:7,
+        marginTop:0,
+        marginRight: 25,
         borderRadius:SIZES.medium,
         justifyContent:"center",
         alignItems:"center",

@@ -1,4 +1,4 @@
-import {View, Text, TouchableOpacity} from 'react-native'
+import {View, Text, TouchableOpacity, TextInput} from 'react-native'
 import React from 'react'
 import styles from './welcome.style'
 import { COLORS, SIZES } from '../../constants'
@@ -9,19 +9,16 @@ const Welcome=() =>{
         <View>
             <View style={styles.container}>
                 <Text style={styles.welcometext(COLORS.black, SIZES.xSmall)}>
-                    {" "}
-                    Find The Most
+                Find The Most
                 </Text>
                 <Text style={styles.welcometext(COLORS.primary, 0)}>
-                    {" "}
-                    Luxurious Furniture
+                Luxurious Furniture
                 </Text>
             </View>
 
             <View style={styles.searchContainer}>
                 <TouchableOpacity>
                     <Feather name="search" size={24} style={styles.searchIcon}/>
-
                 </TouchableOpacity>
                 <View style={styles.searchWrapper}>
                     <TextInput
@@ -31,7 +28,6 @@ const Welcome=() =>{
                     placeholder="What are you looking for?"
                     />
                 </View>
-
                 <View>
                     <TouchableOpacity style={styles.searchBtn}>
                         <Ionicons name="camera-outline" size={SIZES.xLarge} color={COLORS.offwhite}/>

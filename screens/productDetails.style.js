@@ -3,6 +3,7 @@ import { COLORS, SIZES } from "../constants";
 
 const styles= StyleSheet.create({
     container:{
+        marginTop:10,
         flex:1,
         backgroundColor:COLORS.lightWhite
     },
@@ -33,23 +34,21 @@ const styles= StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-between',
         alignItems:'center',
-        width:SIZES.width -44,
-        top:20
-
+        width:SIZES.width,
+        top:7
     },
     title:{
         fontFamily:'bold',
         fontSize:SIZES.large
     },
     priceWrapper:{
-        background,
         backgroundColor:COLORS.secondary,
-        borderRadius:SIZES.large
+        borderRadius:SIZES.medium
     },
     price:{
         paddingHorizontal:10,
         fontFamily:'semibold',
-        fontSize:SIZES.large
+        fontSize:SIZES.medium
     },
     ratingRow:{
         paddingBottom:SIZES.small,
@@ -72,18 +71,18 @@ const styles= StyleSheet.create({
         paddingHorizontal:SIZES.xSmall
     },
     descriptionWrapper:{
-        marginTop:SIZES.large,
-        marginHorizontal: SIZES.large
+        marginTop:SIZES.medium,
+        marginHorizontal: SIZES.small
     },
     description:{
         fontFamily:'medium',
-        fontSize:SIZES.large -2,
+        fontSize:SIZES.medium,
     },
     descText:{
         fontFamily:'regular',
         fontSize:SIZES.small,
         textAlign:'justify',
-        marginBottom:SIZES.small
+        marginBottom:SIZES.xSmall
     },
     location:{
         flexDirection:'row',

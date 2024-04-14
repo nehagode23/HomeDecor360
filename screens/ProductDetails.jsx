@@ -1,9 +1,8 @@
 import { Image, Text, View, TouchableOpacity } from "react-native";
 import React, {useState} from "react";
 import {Fontisto, Ionicons, SimpleLineIcons, MaterialCommunityIcons} from '@expo/vector-icons';
-import styles from "./productDetails.style";
+import styles from "./productDetails.style.js";
 import { COLORS, SIZES } from "../constants";
-import { useState } from "react";
 
 const ProductDetails=({navigation})=>{
     const [count, setCount]=useState(1)
@@ -30,7 +29,7 @@ const ProductDetails=({navigation})=>{
 
             </View>
             <Image
-            source={{uri:'https://www.freepik.com/free-photo/living-room-mid-century-style-with-warm-colors-ai-generative_41369780.htm#query=furniture&position=19&from_view=keyword&track=sph&uuid=8a8b6ffb-5ae1-4e86-9ffe-59ae9891b40b'}}
+            source={{uri:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fdemiwall.com%2Fproducts%2Froyal-place-sheesham-wood-5-seater-sofa-set-for-living-room-furniture&psig=AOvVaw1T78SD_K_VafmoWt3cEGF3&ust=1713198094095000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKDL27COwoUDFQAAAAAdAAAAABAE'}}
             style={styles.image}
             />
 

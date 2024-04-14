@@ -30,7 +30,8 @@ const Home = () => {
             </View>
 
             
-            <ScrollView>
+            <ScrollView
+            vertical={true}>
                 <Welcome/>
                 <Carousel/>
                 <Heading/>

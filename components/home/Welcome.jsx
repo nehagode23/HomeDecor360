@@ -1,5 +1,6 @@
 import {View, Text, TouchableOpacity, TextInput} from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import styles from './welcome.style'
 import { COLORS, SIZES } from '../../constants'
 import {Feather, Ionicons} from '@expo/vector-icons';
@@ -7,6 +8,10 @@ import { useNavigation } from '@react-navigation/native';
 
 const Welcome=() =>{
     const navigation = useNavigation();
+    
+    const openCamera = async()=>{
+        const result= await launchCamera();
+    };
 
     return(
         <View>
@@ -32,7 +37,7 @@ const Welcome=() =>{
                     />
                 </View>
                 <View>
-                    <TouchableOpacity style={styles.searchBtn}>
+                    <TouchableOpacity style={styles.searchBtn} onPress={openCamera}>
                         <Ionicons name="camera-outline" size={SIZES.xLarge} color={COLORS.offwhite}/>
                     </TouchableOpacity>
                 </View>

@@ -1,11 +1,11 @@
 import { Image, Text, View, TouchableOpacity } from "react-native";
 import React, {useState} from "react";
 import {Fontisto, Ionicons, SimpleLineIcons, MaterialCommunityIcons} from '@expo/vector-icons';
-import styles from "./productDetails.style.js";
+import styles from "./productDetails.style";
 import { COLORS, SIZES } from "../constants";
 
 const ProductDetails=({navigation})=>{
-    const [count, setCount]=useState(1)
+    const [count, setCount]=useState(1);
 
     const increment=()=>{
         setCount(count+1)
@@ -39,6 +39,7 @@ const ProductDetails=({navigation})=>{
                 <View style={styles.priceWrapper}>
                 <Text style={styles.price}>Rs. 600</Text>
                 </View>
+            </View>
 
                 <View style={styles.ratingRow}>
                     <View style={styles.rating}>
@@ -53,19 +54,20 @@ const ProductDetails=({navigation})=>{
                     </View>
 
                     <View style={styles.rating}>
-                        <TouchableOpacity onPress={()=>decrement}>
+                        <TouchableOpacity onPress={()=>decrement()}>
                             <SimpleLineIcons 
                             name="minus"
                             size={20}/>
                         </TouchableOpacity>
                     <Text style={styles.ratingText}> {count} </Text>
-                    <TouchableOpacity onPress={()=>increment}>
+                    <TouchableOpacity onPress={()=>increment()}>
                             <SimpleLineIcons 
                             name="plus"
                             size={20}/>
                         </TouchableOpacity>
                     </View>
                 </View>
+
                 <View style={styles.descriptionWrapper}>
                     <Text style={styles.description}>Description</Text>
                     <Text style={styles.descText}>
@@ -99,7 +101,6 @@ const ProductDetails=({navigation})=>{
             </View>
             </View>
             
-        </View>
     )
 }
 

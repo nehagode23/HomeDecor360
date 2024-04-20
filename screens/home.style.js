@@ -7,6 +7,9 @@ const styles= StyleSheet.create({
         fontFamily:"bold",
         fontSize:40
     },
+    area:{
+        marginBottom:120
+    },
     appBarWrapper:{
         marginHorizontal:22,
         marginTop:SIZES.small

@@ -6,10 +6,9 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const Carousel =()=>{
     const slides= [
-        "../../assets/images/fn1.jpg",
-        "https://www.freepik.com/free-photo/living-room-mid-century-style-with-warm-colors-ai-generative_41369780.htm#query=furniture&position=19&from_view=keyword&track=sph&uuid=8a8b6ffb-5ae1-4e86-9ffe-59ae9891b40b",
-        "https://www.freepik.com/free-photo/stylish-scandinavian-living-room-with-design-mint-sofa-furnitures-mock-up-poster-map-plants-eleg_38852655.htm#query=furniture&position=6&from_view=keyword&track=sph&uuid=b88424d7-149a-4dbd-aa1b-e17f81009f73",
-
+        require("C:/Users/Neha/OneDrive/Desktop/PROGRAMS/furniture app/HomeDecor360/assets/images/fn1.jpg"),
+        require("C:/Users/Neha/OneDrive/Desktop/PROGRAMS/furniture app/HomeDecor360/assets/images/fn2.jpg"),
+        require("C:/Users/Neha/OneDrive/Desktop/PROGRAMS/furniture app/HomeDecor360/assets/images/fn3.jpg"),
     ]
     return (
         <View style={styles.carouselContainer}>

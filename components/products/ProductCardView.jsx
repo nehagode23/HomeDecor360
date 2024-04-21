@@ -5,23 +5,23 @@ import {Ionicons} from "@expo/vector-icons";
 import { COLORS } from "../../constants";
 import { useNavigation } from "@react-navigation/native";
 
-const ProductCardView =()=> {
+const ProductCardView =({item})=> {
     const navigation=useNavigation();
 
     return(
-        <TouchableOpacity onPress={()=>{navigation.navigate("ProductDetails")}}>
+        <TouchableOpacity onPress={()=>{navigation.navigate("ProductDetails",{item})}}>
             <View style={styles.container}>
                 <View style={styles.imageContainer}>
                     <Image
-                    source={{uri:"https://www.freepik.com/free-photo/living-room-mid-century-style-with-warm-colors-ai-generative_41369780.htm#query=furniture&position=19&from_view=keyword&track=sph&uuid=8a8b6ffb-5ae1-4e86-9ffe-59ae9891b40b"}}
+                    source={{uri:item.imageUrl}}
                     style={styles.image}
                     />
 
                 </View>
                 <View style={styles.details}>
-                    <Text style={styles.title} numberOfLines={1}>Product </Text>
-                    <Text style={styles.supplier} numberOfLines={1}>Product </Text>
-                    <Text style={styles.price}>Rs. 150 </Text>
+                    <Text style={styles.title} numberOfLines={1}>{item.title} </Text>
+                    <Text style={styles.supplier} numberOfLines={1}>{item.supplier} </Text>
+                    <Text style={styles.price}>Rs. {item.price} </Text>
 
                 </View>
                 <TouchableOpacity style={styles.addBtn}>

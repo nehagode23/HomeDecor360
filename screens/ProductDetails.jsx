@@ -1,10 +1,15 @@
 import { Image, Text, View, TouchableOpacity } from "react-native";
 import React, {useState} from "react";
+import { useRoute } from "@react-navigation/native";
 import {Fontisto, Ionicons, SimpleLineIcons, MaterialCommunityIcons} from '@expo/vector-icons';
 import styles from "./productDetails.style";
 import { COLORS, SIZES } from "../constants";
 
 const ProductDetails=({navigation})=>{
+    const route=useRoute();
+    const {item} = route.params;
+
+
     const [count, setCount]=useState(1);
 
     const increment=()=>{
@@ -29,15 +34,15 @@ const ProductDetails=({navigation})=>{
 
             </View>
             <Image
-            source={{uri:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fdemiwall.com%2Fproducts%2Froyal-place-sheesham-wood-5-seater-sofa-set-for-living-room-furniture&psig=AOvVaw1T78SD_K_VafmoWt3cEGF3&ust=1713198094095000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKDL27COwoUDFQAAAAAdAAAAABAE'}}
+            source={{uri:item.imageUrl}}
             style={styles.image}
             />
 
             <View style={styles.details}>
             <View style={styles.titleRow}>
-                <Text style={styles.title}>Product</Text>
+                <Text style={styles.title}>{item.title}</Text>
                 <View style={styles.priceWrapper}>
-                <Text style={styles.price}>Rs. 600</Text>
+                <Text style={styles.price}>Rs. {item.price}</Text>
                 </View>
             </View>
 
@@ -71,7 +76,7 @@ const ProductDetails=({navigation})=>{
                 <View style={styles.descriptionWrapper}>
                     <Text style={styles.description}>Description</Text>
                     <Text style={styles.descText}>
-                        The product is a new available fvne erijef jkwen.
+                        {item.description}
                     </Text>
                 </View>
 
@@ -79,7 +84,7 @@ const ProductDetails=({navigation})=>{
                     <View style={styles.location}>
                         <View style={{flexDirection:'row'}}>
                         <Ionicons name='location-outline' size={20}/>
-                        <Text>Delhi</Text>
+                        <Text>{item.location}</Text>
                         </View>
 
                         <View style={{flexDirection:'row'}}>

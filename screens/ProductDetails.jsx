@@ -6,8 +6,8 @@ import styles from "./productDetails.style";
 import { COLORS, SIZES } from "../constants";
 
 const ProductDetails=({navigation})=>{
-    const route=useRoute();
-    const {item} = route.params;
+    //const route=useRoute();
+    //const {item} = route.params;
 
 
     const [count, setCount]=useState(1);
@@ -34,15 +34,15 @@ const ProductDetails=({navigation})=>{
 
             </View>
             <Image
-            source={{uri:item.imageUrl}}
+            source={{uri:'../../assets/images/bk.png'}}
             style={styles.image}
             />
 
             <View style={styles.details}>
             <View style={styles.titleRow}>
-                <Text style={styles.title}>{item.title}</Text>
+                <Text style={styles.title}>Product</Text>
                 <View style={styles.priceWrapper}>
-                <Text style={styles.price}>Rs. {item.price}</Text>
+                <Text style={styles.price}>Rs. 799</Text>
                 </View>
             </View>
 
@@ -76,7 +76,7 @@ const ProductDetails=({navigation})=>{
                 <View style={styles.descriptionWrapper}>
                     <Text style={styles.description}>Description</Text>
                     <Text style={styles.descText}>
-                        {item.description}
+                        Green sofa with a customized cushion. Very delicate.
                     </Text>
                 </View>
 

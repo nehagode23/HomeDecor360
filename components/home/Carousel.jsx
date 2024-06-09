@@ -6,9 +6,9 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const Carousel =()=>{
     const slides= [
-        require("C:/Users/Neha/OneDrive/Desktop/PROGRAMS/furniture app/HomeDecor360/assets/images/fn1.jpg"),
-        require("C:/Users/Neha/OneDrive/Desktop/PROGRAMS/furniture app/HomeDecor360/assets/images/fn2.jpg"),
-        require("C:/Users/Neha/OneDrive/Desktop/PROGRAMS/furniture app/HomeDecor360/assets/images/fn3.jpg"),
+        require("../../assets/images/fn1.jpg"),
+        require("../../assets/images/fn2.jpg"),
+        require("../../assets/images/fn3.jpg"),
     ]
     return (
         <View style={styles.carouselContainer}>

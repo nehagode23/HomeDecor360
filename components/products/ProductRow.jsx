@@ -9,23 +9,14 @@ const ProductRow = ()=>{
     const {data, isLoading, error} = useFetch()
     const products=[1, 2, 3, 4]
     return(
-        <View style={styles.container}>
-        {isLoading? (
-            <ActivityIndicator size={SIZES.large} color={COLORS.primary} />
-        ):error?(
-            <Text>
-                Something went wrong
-            </Text>
-        ):(
-            <FlatList
-        data={data}
-        keyExtractor={(item)=>item._id}
-        renderItem={({item})=> <ProductCardView item={item}/>}
-        horizontal
-        contentContainerStyle={{columnGap:SIZES.medium}}
-        />
-        )}
-        </View>
+            <View style = {{marginTop: SIZES.medium}}> 
+                <FlatList
+                data={products}
+                renderItem={({item})=> <ProductCardView />}
+                horizontal
+                contentContainerStyle={{columnGap:SIZES.medium}}
+                />
+            </View>
     )
 }
 
